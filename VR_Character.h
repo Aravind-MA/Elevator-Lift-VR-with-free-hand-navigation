@@ -72,14 +72,9 @@ private:
 		class USkeletalMeshComponent* LeftHand;
 
 	UPROPERTY(VisibleAnywhere)
-	class UStaticMeshComponent* Melle;
-
-	UPROPERTY(VisibleAnywhere)
 	class UStaticMeshComponent* DestinationMark;
 
-	UPROPERTY(VisibleAnywhere)
-		class USkeletalMeshComponent* Gun;
-
+	
 	UPROPERTY(VisibleAnywhere)
 		class USkeletalMeshComponent* Player;
 
