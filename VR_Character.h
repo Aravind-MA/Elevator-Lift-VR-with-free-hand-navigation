@@ -7,14 +7,7 @@
 #include "MotionControllerComponent.h"
 #include "VR_Character.generated.h"
 
-UENUM(BlueprintType)
-enum class ESocketAnimation : uint8
-{
-	EIS_FrontAnim UMETA(DisplayName = "Front"),
-	EIS_BackAnim UMETA(DisplayName = "Back"),
-	EIS_LeftAnim UMETA(DisplayName = "Left"),
-	EIS_RightAnim UMETA(DisplayName = "Right")
-};
+
 UCLASS()
 class VR_AI_PROGRAMING_API AVR_Character : public ACharacter
 {
@@ -55,11 +48,7 @@ public:
 private:
 
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-		class USoundCue* SpawnSound;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-	float MaxRange = 10000.f;
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	float RotationRate = 0.0f;
@@ -97,18 +86,6 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "SocketAnim", meta = (AllowPrivateAccess = "true"))
 		class USkeletalMeshComponent* body;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-		class UParticleSystem* MuzzleFlash;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-		class UParticleSystem* Hit;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-		class UParticleSystem* HitHeadSocket;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-		class UParticleSystem* HitSocket;
-
 	
 	UPROPERTY(EditAnywhere)
 		float MaxTeleport = 1000.f;
@@ -126,16 +103,11 @@ private:
 	UPROPERTY(EditAnywhere)
 		FVector TeleportationExtent = FVector(100.f, 100.f, 100.f);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-		float Damage = 10.f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-		float HeadshotDamage=25.f;
+	
 
-	AVR_Character* VR_char;
-	FHitResult HitFire;
+	
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SocketAnim", meta = (AllowPrivateAccess = "true"))
-		ESocketAnimation SocketAnimation; 
+	
 
 	
 };
