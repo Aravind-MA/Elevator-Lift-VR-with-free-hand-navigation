@@ -23,7 +23,7 @@ void ASplineActormovment::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	
+
 
 	
 }
