@@ -39,7 +39,6 @@ public:
 		void OnEndMovementTimeline();
 
 	
-
 	UFUNCTION()
 	 void AfterTheEnd();//optional //Unwanted
 
