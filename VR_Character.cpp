@@ -78,7 +78,6 @@ void AVR_Character::BeginPlay()
 {
 	Super::BeginPlay();
 	
-
 }
 
 // Called every frame
@@ -175,7 +174,6 @@ void AVR_Character::SnapRotation(float Local)
 	AddControllerYawInput(Local * RotationRate * GetWorld()->GetDeltaSeconds());
 
 }
-
 
 
 
